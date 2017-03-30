@@ -1,9 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "refactor-me", "refactor-me\refactor-me.csproj", "{20AB69F9-F2D3-4A68-96C3-424EC8B9406E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{BB9FBEF0-A71F-4415-B812-2E8E0AB6D5FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{CD83FEDC-AC4D-44CD-AE84-E7417BE74F8E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{610B6892-100F-4F47-932D-2ED087BF6316}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedObjects", "SharedObjects", "{8832E65C-6A75-4CF2-8ABD-D509EA8E49D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{E5060632-B060-402F-85B0-F02746B2468F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "refactor-me.Contract", "refactor-me.Contract\refactor-me.Contract.csproj", "{4CE6997F-51B3-4791-88F3-18C62166B928}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "refactor-me.SharedObjects", "refactor-me.SharedObjects\refactor-me.SharedObjects.csproj", "{0001936D-3CC5-44AF-89F4-CED1AE0C3DC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "refactor-me.Tests", "refactor-me.Tests\refactor-me.Tests.csproj", "{65EA56EB-4181-44F2-A167-C375F321525D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "refactor-me.Repositories", "refactor-me.Repositories\refactor-me.Repositories.csproj", "{EA13D9C4-38E2-4FC8-97FD-7D28F0B5055F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +33,31 @@ Global
 		{20AB69F9-F2D3-4A68-96C3-424EC8B9406E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20AB69F9-F2D3-4A68-96C3-424EC8B9406E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20AB69F9-F2D3-4A68-96C3-424EC8B9406E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CE6997F-51B3-4791-88F3-18C62166B928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CE6997F-51B3-4791-88F3-18C62166B928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CE6997F-51B3-4791-88F3-18C62166B928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CE6997F-51B3-4791-88F3-18C62166B928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0001936D-3CC5-44AF-89F4-CED1AE0C3DC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0001936D-3CC5-44AF-89F4-CED1AE0C3DC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0001936D-3CC5-44AF-89F4-CED1AE0C3DC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0001936D-3CC5-44AF-89F4-CED1AE0C3DC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65EA56EB-4181-44F2-A167-C375F321525D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65EA56EB-4181-44F2-A167-C375F321525D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65EA56EB-4181-44F2-A167-C375F321525D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65EA56EB-4181-44F2-A167-C375F321525D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA13D9C4-38E2-4FC8-97FD-7D28F0B5055F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA13D9C4-38E2-4FC8-97FD-7D28F0B5055F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA13D9C4-38E2-4FC8-97FD-7D28F0B5055F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA13D9C4-38E2-4FC8-97FD-7D28F0B5055F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{20AB69F9-F2D3-4A68-96C3-424EC8B9406E} = {BB9FBEF0-A71F-4415-B812-2E8E0AB6D5FD}
+		{4CE6997F-51B3-4791-88F3-18C62166B928} = {CD83FEDC-AC4D-44CD-AE84-E7417BE74F8E}
+		{0001936D-3CC5-44AF-89F4-CED1AE0C3DC0} = {8832E65C-6A75-4CF2-8ABD-D509EA8E49D5}
+		{65EA56EB-4181-44F2-A167-C375F321525D} = {E5060632-B060-402F-85B0-F02746B2468F}
+		{EA13D9C4-38E2-4FC8-97FD-7D28F0B5055F} = {610B6892-100F-4F47-932D-2ED087BF6316}
 	EndGlobalSection
 EndGlobal

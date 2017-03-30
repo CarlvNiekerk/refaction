@@ -1,4 +1,8 @@
-﻿using System.Web.Http;
+﻿using Autofac;
+using Autofac.Integration.WebApi;
+using System.Reflection;
+using System.Web.Http;
+using refactor_me.Repositories;
 
 namespace refactor_me
 {
@@ -19,6 +23,20 @@ namespace refactor_me
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            var builder = new ContainerBuilder();
+
+            // Get your HttpConfiguration.
+            var configuration = GlobalConfiguration.Configuration;
+
+            // Register your Web API Controllers
+            builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
+            builder.RegisterType<ProductOptionsService>().AsImplementedInterfaces();
+            builder.RegisterType<ProductsService>().AsImplementedInterfaces();
+
+            // Set the dependancy resolver to be Autofac
+            var container = builder.Build();
+            config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
         }
     }
 }
